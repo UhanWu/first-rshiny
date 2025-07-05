@@ -23,15 +23,15 @@ library(shinythemes)
       tabPanel("Navbar 1",
                sidebarPanel(
                  tags$h3("Input:"),
-                 textInput("txt1", "Given Name:", ""),
-                 textInput("txt2", "Surname:", ""),
+                 textInput("txt1", "Given Name:", ""), # txt1 send to server
+                 textInput("txt2", "Surname:", ""), # text2 send to server
                  
                ), # sidebarPanel
                mainPanel(
                             h1("Header 1"),
                             
                             h4("Output 1"),
-                            verbatimTextOutput("txtout"),
+                            verbatimTextOutput("txtout"), # txtout receive from server
 
                ) # mainPanel
                
