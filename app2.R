@@ -7,13 +7,16 @@
 # Modified from https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/
 
 library(shiny)
+library(shinythemes)
+
 data(airquality)
 
 # Define UI for app that draws a histogram ----
 ui <- fluidPage(
+  theme = shinytheme("united"),
   
   # App title ----
-  titlePanel("Ozone level!"),
+  titlePanel("Ozone!"),
   
   # Sidebar layout with input and output definitions ----
   sidebarLayout(
@@ -24,9 +27,10 @@ ui <- fluidPage(
       # Input: Slider for the number of bins ----
       sliderInput(inputId = "bins",
                   label = "Number of bins:",
-                  min = 1,
-                  max = 50,
-                  value = 30)
+                  min = 0,
+                  max = 40,
+                  value = 20,
+                  step = 2)
       
     ),
     
